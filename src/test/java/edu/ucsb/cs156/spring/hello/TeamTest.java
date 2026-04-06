@@ -38,7 +38,7 @@ public class TeamTest {
     }
 
     @Test
-    public void test_equals_team_with_other_team_same_members() {
+    public void test_equals_team_with_other_team_same_name_members() {
         Team otherteam = new Team("test-team");
         otherteam.addMember("kyle");
         otherteam.addMember("bob");
@@ -51,8 +51,8 @@ public class TeamTest {
 
 
     @Test
-    public void test_equals_team_with_other_team_diff_members() {
-        Team otherteam = new Team("team");
+    public void test_equals_team_with_other_team_same_name_diff_members() {
+        Team otherteam = new Team("test-team");
         otherteam.addMember("kyle");
         otherteam.addMember("bob");
 
@@ -69,7 +69,7 @@ public class TeamTest {
         otherteam.addMember("bob");
 
         team.addMember("kyle");
-        team.addMember("sharon");
+        team.addMember("bob");
 
         assertTrue(!team.equals(otherteam),".equals() diff name same mebmbers should be false");
     }
